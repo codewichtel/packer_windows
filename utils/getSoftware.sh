@@ -13,12 +13,12 @@ mkdir -p "$OUTPUT_FOLDER"
 
 # Download the files
 echo "Downloading qemu-ga-x86_64.msi..."
-curl -o "$OUTPUT_FOLDER/qemu-ga-x86_64.msi" "$QEMU_GA_URL"
+curl -L -o "$OUTPUT_FOLDER/qemu-ga-x86_64.msi" "$QEMU_GA_URL"
 
-echo "Downloading virtio-win-gt-x64.msi..."
-curl -o "$OUTPUT_FOLDER/virtio-win-gt-x64.msi" "$VIRTIO_WIN_GT_URL"
+echo -L "Downloading virtio-win-gt-x64.msi..."
+curl -L -o "$OUTPUT_FOLDER/virtio-win-gt-x64.msi" "$VIRTIO_WIN_GT_URL"
 
 echo "Downloading CloudbaseInitSetup_x64.msi..."
-curl -o "$OUTPUT_FOLDER/CloudbaseInitSetup_x64.msi" "$CLOUDBASE_INIT_URL"
+curl -L -o "$OUTPUT_FOLDER/CloudbaseInitSetup_x64.msi" "$CLOUDBASE_INIT_URL"
 
 echo "Downloads completed. Files are saved in $OUTPUT_FOLDER."
