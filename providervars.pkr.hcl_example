@@ -1,0 +1,16 @@
+# Proxmox API Sensitive Variables
+variable "proxmox_api_url" {
+  type    = string
+  default = "https://192.168.0.200:8006/api2/json" ##your proxmox server address
+}
+
+variable "proxmox_api_token_id" {
+  type    = string
+  default = "terraform@pam!provisioning" ##needs to match your token description
+}
+
+variable "proxmox_api_token_secret" {
+  type      = string
+  default   = "00000-00000000-000000-0000" ##your token that you are creating 
+  sensitive = true
+}
