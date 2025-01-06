@@ -11,9 +11,13 @@ check the iso file var in **windows-server-2022.pkr.hcl**
 
 ### Get some software and drivers
 `cd utils`
+
 `chmod +x *`
+
 `./getDrivers.sh` 
+
 `./getSoftware.sh`
+
 
 ### init Packer
 `packer init .`
